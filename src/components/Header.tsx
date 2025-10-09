@@ -5,7 +5,7 @@ export default function Header() {
     const [open, setOpen] = useState(false);
 
     return (
-        <div className="h-full w-full ">
+        <header className="w-full h-22 z-50">
             <div
                 aria-label="Mobile menu"
                 onClick={() => setOpen(false)}
@@ -58,6 +58,6 @@ export default function Header() {
                     <img className="h-10 w-10 rounded-full" src="https://images.pexels.com/photos/762020/pexels-photo-762020.jpeg" alt="" />
                 </Link>
             </div>
-        </div>
+        </header>
     );
 }

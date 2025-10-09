@@ -1,5 +1,10 @@
+import Logo from "./sections/Logo";
+
 export default function Home() {
   return (
-      <div className="grid min-h-dvh grid-rows-[1fr_4rem] w-full bg-blue-100">Home</div>
+    // TODO: fix the height of main to not be dvh, maybe use flex instead of grid
+      <main className="grid min-h-dvh grid-rows-[1fr_4rem] w-full">
+        <Logo/>
+      </main>
   )
 }
