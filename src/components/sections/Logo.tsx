@@ -4,20 +4,20 @@ import LazyImage from '../ui/LazyImage'
 
 export default function Logo() {
     const titleSpring = useSpring({
-        from: { x: -100 },
-        to: { x: 0 },
+        from: { x: -100, opacity: 0 },
+        to: { x: 0, opacity: 1 },
         config: { duration: 500, delay: 100 } 
     })
 
     const contentSpring = useSpring({
-        from: { y: 100 },
-        to: { y: 0},
+        from: { y: 100,opacity:0 },
+        to: { y: 0, opacity: 1},
         config: { duration: 500, delay: 100 }
     })
 
     return (
-        <div className='h-[850px] md:h-[800px] xl:h-[1100px] w-full'>
-            <div className='h-full w-full md:hidden' about='phone view'>
+        <>
+            <section className=' w-full md:hidden' about='phone view'>
                 <div className='p-5'>
                     <animated.h5
                         style={titleSpring}
@@ -28,7 +28,7 @@ export default function Logo() {
                 </div>
                 <div className='h-[320px] w-full bg-[var(--wst-button-color-text-primary)]'>
                     {/* TODO: decide wich way to show image */}
-                    <LazyImage className='h-full w-full' src="/1.JPG"/>
+                    <LazyImage className='h-full w-full' src="/1.JPG" playAnimatiom={true}/>
                     {/* <img className='h-full w-full' src="/1.JPG" alt="" /> */}
                 </div>
 
@@ -41,14 +41,14 @@ export default function Logo() {
                     </p>
                     <Button to='our-services' classes='ms-auto'>לקביעת תור</Button>
                 </animated.div>
-            </div>
-            <div className='hidden md:grid h-full w-full grid-cols-[200px_1fr_200px]  xl:grid-cols-[300px_1fr_200px] grid-rows-[1fr_250px]' about='computer view'>
+            </section>
+            <section className='hidden md:grid w-full grid-cols-[200px_1fr_200px]  xl:grid-cols-[300px_1fr_200px] grid-rows-[600px_250px] xl:grid-rows-[1fr_250px]' about='computer view'>
                 <div className='row-span-2 h-[85%] w-full bg-[var(--wst-button-color-text-primary)]'>
                     {/* TODO: load the hole image before place it to the screen */}
-                    <LazyImage className='h-full w-full 'src='/1.JPG'/>
+                    <LazyImage className='h-full w-full 'src='/1.JPG' playAnimatiom={true}/>
                     {/* <img className='h-full w-full' src="/1.JPG" alt="" /> */}
                 </div>
-                <div className=' col-span-2 p-5 my-auto '>
+                <div className='col-span-2 p-5 my-auto '>
                     <animated.h5
                         style={titleSpring}
                         className='text-left md:text-[100px] xl:text-[200px] font-semibold text-[var(--wst-button-color-text-primary)]'
@@ -66,7 +66,7 @@ export default function Logo() {
                     </p>
                     <Button to='our-services' classes='mx-auto mb-auto'>לקביעת תור</Button>
                 </animated.div>
-            </div>
-        </div>
+            </section>
+        </>
     )
 }
