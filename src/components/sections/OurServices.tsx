@@ -1,6 +1,6 @@
 import { FiScissors, FiSun, FiDroplet, FiFeather, FiBriefcase, FiUser } from 'react-icons/fi'
 import Button from '../ui/Button'
-
+import { TiPointOfInterestOutline } from "react-icons/ti";
 const OurServicesArr = [
     {
         id: 'nails',
@@ -10,7 +10,7 @@ const OurServicesArr = [
     },
     {
         id: 'hair',
-        Icon: FiFeather,
+        Icon: TiPointOfInterestOutline,
         title: 'תסרוקות והסטיילינג',
         description: 'תסרוקות לאירועים וסטייל מקצועי להדגשת המראה הטבעי.'
     },
@@ -39,14 +39,14 @@ const OurServicesArr = [
         description: 'ייעוץ אישית לצרכי טיפוח ושיקום והמלצות למוצרים.'
     }
 ]
-
+// TODO:ADD ANIMATION
 export default function OurServices() {
     return (
         <>
             <section className="py-8">
                 <h2 className="text-2xl text-center font-bold mb-4 text-[var(--wst-button-color-text-primary)]">השירותים שלנו</h2>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[30%_40%_30%] gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[30%_40%_30] gap-6">
                     {OurServicesArr.map(({ id, Icon, title, description }) => (
                         <article key={id} className="flex flex-col items-center gap-3 p-4 bg-white/5">
                             <div className="text-[var(--wst-button-color-text-primary)] text-3xl">

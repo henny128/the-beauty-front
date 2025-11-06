@@ -1,18 +1,19 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 interface LazyImageProps {
     src: string;
     alt?: string;
-    className?: string;
+    classesContainer?: string;
+    classesImage?: string;
     playAnimatiom?: boolean;
 }
 
 // TODO: write classes for father and image to set size and position
-const LazyImage: React.FC<LazyImageProps> = ({ src, alt = "", className ="", playAnimatiom }) => {
+const LazyImage: React.FC<LazyImageProps> = ({ src, alt = "", classesContainer = "", classesImage = "", playAnimatiom }) => {
     const [loaded, setLoaded] = useState(false);
 
     return (
-        <div className={`relative ${className}`}>
+        <div className={`relative ${classesContainer}`}>
             {!loaded && playAnimatiom && (
                 <div className={` bg-gray-200 animate-pulse absolute inset-0` } />
             )}
@@ -20,8 +21,7 @@ const LazyImage: React.FC<LazyImageProps> = ({ src, alt = "", className ="", pla
             <img
                 src={src}
                 alt={alt}
-                className={`${className} w-full transition-opacity duration-300 ${loaded ? "opacity-100" : "opacity-0"
-                    }`}
+                className={`h-full w-full transition-opacity duration-300 ${loaded ? "opacity-100" : "opacity-0"} ${classesImage}`}
                 onLoad={() => setLoaded(true)}
                 onError={() => setLoaded(true)} // optional: hide loader even if it fails
             />

@@ -28,7 +28,7 @@ export default function Logo() {
                 </div>
                 <div className='h-[320px] w-full bg-[var(--wst-button-color-text-primary)]'>
                     {/* TODO: decide wich way to show image */}
-                    <LazyImage className='h-full w-full' src="/1.JPG" playAnimatiom={true}/>
+                    <LazyImage classesContainer='h-full w-full' src="/1.JPG" playAnimatiom={true}/>
                     {/* <img className='h-full w-full' src="/1.JPG" alt="" /> */}
                 </div>
 
@@ -45,7 +45,7 @@ export default function Logo() {
             <section className='hidden md:grid w-full grid-cols-[200px_1fr_200px]  xl:grid-cols-[300px_1fr_200px] grid-rows-[600px_250px] xl:grid-rows-[1fr_250px]' about='computer view'>
                 <div className='row-span-2 h-[85%] w-full bg-[var(--wst-button-color-text-primary)]'>
                     {/* TODO: load the hole image before place it to the screen */}
-                    <LazyImage className='h-full w-full 'src='/1.JPG' playAnimatiom={true}/>
+                    <LazyImage classesContainer='h-full w-full' src='/1.JPG' playAnimatiom={true}/>
                     {/* <img className='h-full w-full' src="/1.JPG" alt="" /> */}
                 </div>
                 <div className='col-span-2 p-5 my-auto '>

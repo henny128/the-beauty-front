@@ -2,6 +2,7 @@ import AboutUs from "./sections/AboutUs";
 import Decorative from "./sections/Decorative";
 import Logo from "./sections/Logo";
 import OurServices from "./sections/OurServices";
+import Reviews from "./sections/Reviews";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
         <AboutUs />
         <OurServices/>
         <Decorative/>
+        <Reviews/>
       </main>
   )
 }

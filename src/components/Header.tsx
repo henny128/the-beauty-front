@@ -56,7 +56,7 @@ export default function Header() {
                     היופי שבך
                 </h5>}
                 <Link to={"/profil"}>
-                        <LazyImage className="h-10 w-10 rounded-full" src="https://images.pexels.com/photos/762020/pexels-photo-762020.jpeg" alt="" />
+                        <LazyImage classesImage="h-10! w-10! rounded-full"  src="https://images.pexels.com/photos/762020/pexels-photo-762020.jpeg" alt="" />
                     {/* <img className="h-10 w-10 rounded-full" src="https://images.pexels.com/photos/762020/pexels-photo-762020.jpeg" alt="" /> */}
                 </Link>
             </div>
