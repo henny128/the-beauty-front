@@ -1,6 +1,9 @@
-import { FiScissors, FiSun, FiDroplet, FiFeather, FiBriefcase, FiUser } from 'react-icons/fi'
-import Button from '../ui/Button'
+import { FiScissors, FiSun, FiDroplet, FiBriefcase, FiUser } from 'react-icons/fi'
 import { TiPointOfInterestOutline } from "react-icons/ti";
+import FadeUp from '../ui/FadeUp';
+import FadeLeft from '../ui/FadeLeft';
+import FadeRight from '../ui/FadeRight';
+
 const OurServicesArr = [
     {
         id: 'nails',
@@ -39,23 +42,58 @@ const OurServicesArr = [
         description: 'ייעוץ אישית לצרכי טיפוח ושיקום והמלצות למוצרים.'
     }
 ]
-// TODO:ADD ANIMATION
+
 export default function OurServices() {
     return (
         <>
-            <section className="py-8">
-                <h2 className="text-2xl text-center font-bold mb-4 text-[var(--wst-button-color-text-primary)]">השירותים שלנו</h2>
+            <section className="py-8 overflow-hidden">
+                <FadeUp>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[30%_40%_30] gap-6">
-                    {OurServicesArr.map(({ id, Icon, title, description }) => (
-                        <article key={id} className="flex flex-col items-center gap-3 p-4 bg-white/5">
-                            <div className="text-[var(--wst-button-color-text-primary)] text-3xl">
-                                <Icon />
-                            </div>
-                            <h3 className="text-lg font-semibold">{title}</h3>
-                            <p className="text-sm text-muted-foreground">{description}</p>
-                        </article>
-                    ))}
+                    <h2 className="text-2xl text-center font-bold mb-4 text-[var(--wst-button-color-text-primary)]">השירותים שלנו</h2>
+                </FadeUp>
+
+                <div className="grid grid-cols-1  md:grid-cols-[auto_40%_auto] gap-6 overflow-hidden">
+                    {OurServicesArr.map(({ id, Icon, title, description }, index) => {
+                        const isEven = index == 1 || index  === 4;
+                        const isRightElement = index == 0 || index == 3;
+                        const isLeftElement = index == 2 || index == 5;
+
+                        let elements;
+
+                        if (isEven) elements = <FadeUp key={id} className='flex flex-col items-center gap-3 p-4 bg-white/5'>
+                            <>
+                                <div className="text-[var(--wst-button-color-text-primary)] text-3xl">
+                                    <Icon />
+                                </div>
+                                <h3 className="text-lg font-semibold">{title}</h3>
+                                <p className="text-sm text-muted-foreground">{description}</p>
+                            </>
+                        </FadeUp>
+
+                        if (isLeftElement) elements = <FadeLeft key={id} className='flex flex-col items-center gap-3 p-4 bg-white/5'>
+                            <>
+                                <div className="text-[var(--wst-button-color-text-primary)] text-3xl">
+                                    <Icon />
+                                </div>
+                                <h3 className="text-lg font-semibold">{title}</h3>
+                                <p className="text-sm text-muted-foreground">{description}</p>
+                            </>
+                        </FadeLeft>
+
+                        if (isRightElement) elements = <FadeRight key={id} className='flex flex-col items-center gap-3 p-4 bg-white/5'>
+                            <>
+                                <div className="text-[var(--wst-button-color-text-primary)] text-3xl">
+                                    <Icon />
+                                </div>
+                                <h3 className="text-lg font-semibold">{title}</h3>
+                                <p className="text-sm text-muted-foreground">{description}</p>
+                            </>
+                        </FadeRight>
+
+                        return (
+                            elements
+                        )
+                    })}
                 </div>
             </section>
         </>

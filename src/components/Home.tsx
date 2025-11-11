@@ -7,7 +7,7 @@ import Reviews from "./sections/Reviews";
 export default function Home() {
   return (
     // TODO: fix the height of main to not be dvh, maybe use flex instead of grid
-      <main className="flex flex-col w-full">
+    <main className="flex flex-col w-full">
         <Logo/>
         <AboutUs />
         <OurServices/>
