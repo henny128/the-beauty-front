@@ -23,7 +23,6 @@ export default function Header() {
             </div>
             <div
                 className={"relative z-50 flex items-center h-full w-full py-2 px-4 md:px-10 " + (open ? "justify-around md:justify-between" : "justify-between")}>
-                {/* // TODO: add loader image */}
                 <button
                     aria-label="Toggle menu"
                     aria-expanded={open}
@@ -57,7 +56,6 @@ export default function Header() {
                 </h5>}
                 <Link to={"/profil"}>
                         <LazyImage classesImage="h-10! w-10! rounded-full"  src="https://images.pexels.com/photos/762020/pexels-photo-762020.jpeg" alt="" />
-                    {/* <img className="h-10 w-10 rounded-full" src="https://images.pexels.com/photos/762020/pexels-photo-762020.jpeg" alt="" /> */}
                 </Link>
             </div>
         </header>

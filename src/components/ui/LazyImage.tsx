@@ -8,7 +8,6 @@ interface LazyImageProps {
     playAnimatiom?: boolean;
 }
 
-// TODO: write classes for father and image to set size and position
 const LazyImage: React.FC<LazyImageProps> = ({ src, alt = "", classesContainer = "", classesImage = "", playAnimatiom }) => {
     const [loaded, setLoaded] = useState(false);
 

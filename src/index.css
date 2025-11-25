@@ -152,3 +152,9 @@
     --wst-color-custom-19: rgb(var(--color_34));
     --wst-color-custom-20: rgb(var(--color_35));
 }
+
+.word-space{
+  word-spacing: 7px;
+  color: var(--wst-button-color-text-primary);
+}
+

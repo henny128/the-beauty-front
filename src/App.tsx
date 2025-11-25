@@ -8,8 +8,6 @@ function App() {
   return (
     <div className="flex flex-col h-dvh w-full overflow-y-auto bg-(--wst-color-fill-base-shade-1) relative">
       <Header />
-
-      {/* TODO: the main content need to be under header too, fix the css */}
       <Home />
     </div>
   )

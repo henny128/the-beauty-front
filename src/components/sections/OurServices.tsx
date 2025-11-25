@@ -49,45 +49,35 @@ export default function OurServices() {
             <section className="py-8 overflow-hidden">
                 <FadeUp>
 
-                    <h2 className="text-2xl text-center font-bold mb-4 text-[var(--wst-button-color-text-primary)]">השירותים שלנו</h2>
+                    <h2 className="text-3xl text-center font-medium mb-4 word-space">השירותים שלנו</h2>
                 </FadeUp>
 
-                <div className="grid grid-cols-1  md:grid-cols-[auto_40%_auto] gap-6 overflow-hidden">
+                <div className="grid grid-cols-1 md:grid-cols-[auto_40%_auto] gap-6 overflow-hidden">
                     {OurServicesArr.map(({ id, Icon, title, description }, index) => {
                         const isEven = index == 1 || index  === 4;
                         const isRightElement = index == 0 || index == 3;
                         const isLeftElement = index == 2 || index == 5;
 
                         let elements;
+                        let children = <>
+                            <div className="text-3xl">
+                                <Icon />
+                            </div>
+                            <h3 className="text-lg font-bold">{title}</h3>
+                            <p className="text-sm text-muted-foreground">{description}</p>
+                        </>
+                        let classes = 'flex flex-col items-center gap-3 p-4 bg-white/5 word-space'
 
-                        if (isEven) elements = <FadeUp key={id} className='flex flex-col items-center gap-3 p-4 bg-white/5'>
-                            <>
-                                <div className="text-[var(--wst-button-color-text-primary)] text-3xl">
-                                    <Icon />
-                                </div>
-                                <h3 className="text-lg font-semibold">{title}</h3>
-                                <p className="text-sm text-muted-foreground">{description}</p>
-                            </>
+                        if (isEven) elements = <FadeUp key={id} className={`${classes}`}>
+                            {children}
                         </FadeUp>
 
-                        if (isLeftElement) elements = <FadeLeft key={id} className='flex flex-col items-center gap-3 p-4 bg-white/5'>
-                            <>
-                                <div className="text-[var(--wst-button-color-text-primary)] text-3xl">
-                                    <Icon />
-                                </div>
-                                <h3 className="text-lg font-semibold">{title}</h3>
-                                <p className="text-sm text-muted-foreground">{description}</p>
-                            </>
+                        if (isLeftElement) elements = <FadeLeft key={id} className={`${classes}`}>
+                            {children}
                         </FadeLeft>
 
-                        if (isRightElement) elements = <FadeRight key={id} className='flex flex-col items-center gap-3 p-4 bg-white/5'>
-                            <>
-                                <div className="text-[var(--wst-button-color-text-primary)] text-3xl">
-                                    <Icon />
-                                </div>
-                                <h3 className="text-lg font-semibold">{title}</h3>
-                                <p className="text-sm text-muted-foreground">{description}</p>
-                            </>
+                        if (isRightElement) elements = <FadeRight key={id} className={`${classes}`}>
+                            {children}
                         </FadeRight>
 
                         return (
