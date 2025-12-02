@@ -20,6 +20,7 @@ export default function Header() {
                     <NavLink to={"/"} className={"text-4xl font-semibold text-right text-[var(--wst-color-fill-base-2)] "} end>Home</NavLink>
                     <NavLink to={"/gallery"} className={"text-4xl font-semibold text-right text-[var(--wst-color-fill-base-2)] "} end>Gallery</NavLink>
                 </div>
+
             </div>
             <div
                 className={"relative z-50 flex items-center h-full w-full py-2 px-4 md:px-10 " + (open ? "justify-around md:justify-between" : "justify-between")}>

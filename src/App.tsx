@@ -1,5 +1,5 @@
 import { createBrowserRouter } from 'react-router'
-import Header from './components/Header'
+import Header from './components/Navbar'
 import Home from './components/Home'
 import NotFound from './components/NotFound'
 // import Footer from './components/Footer'
