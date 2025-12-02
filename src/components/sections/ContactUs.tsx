@@ -10,7 +10,7 @@ export default function ContactUs() {
                     <div></div>
 
                 </div>
-                <div className="relative top-0 h-[550px] md:h-dvh md:w-1/2 w-full bg-[url(girl.png)] md:bg-[size:500px_100dvh] lg:bg-[size:700px_100dvh] md:bg-[position:right_center] bg-no-repeat bg-cover md:bg-fixed">
+                <div className="relative top-0 h-[34.375rem] md:h-dvh md:w-1/2 w-full bg-[url(girl.png)] md:bg-[size:31.25rem_100dvh] lg:bg-[size:43.75rem_100dvh] md:bg-[position:right_center] bg-no-repeat bg-cover md:bg-fixed">
                 </div>
             </div>
         </section>

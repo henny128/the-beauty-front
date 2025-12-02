@@ -12,7 +12,7 @@ export default function Logo() {
                         <> אורך, נפח, וסטייל!</>
                     </FadeLeft>
                 </div>
-                <div className='h-[420px] w-full bg-[var(--wst-button-color-text-primary)]'>
+                <div className='h-[26.25rem] w-full bg-[var(--wst-button-color-text-primary)]'>
                     <LazyImage classesContainer='h-full w-full' src="/girl-2.avif" playAnimatiom={true} />
                 </div>
 
@@ -25,12 +25,12 @@ export default function Logo() {
                     </>
                 </FadeUp>
             </section>
-            <section className='hidden md:grid w-full grid-cols-[200px_1fr_200px]  xl:grid-cols-[300px_1fr_200px] grid-rows-[600px_320px] xl:grid-rows-[1fr_250px] overflow-hidden' about='computer view'>
+            <section className='hidden md:grid w-full grid-cols-[12.5rem_1fr_12.5rem]  xl:grid-cols-[18.75rem_1fr_12.5rem] grid-rows-[37.5rem_20rem] xl:grid-rows-[1fr_15.625rem] overflow-hidden' about='computer view'>
                 <div className='row-span-2 h-[85%] w-full bg-[var(--wst-button-color-text-primary)]'>
                     <LazyImage classesContainer='h-full w-full' classesImage='object-cover!' src='/girl.png' playAnimatiom={true} />
                 </div>
                 <div className='col-span-2 p-5 my-auto '>
-                    <FadeLeft className='text-left md:text-[100px] xl:text-[200px] font-semibold text-[var(--wst-button-color-text-primary)]'
+                    <FadeLeft className='text-left md:text-[6.25rem] xl:text-[12.5rem] font-semibold text-[var(--wst-button-color-text-primary)]'
                     >
                         <>
                             אורך, נפח, וסטייל!
@@ -40,7 +40,7 @@ export default function Logo() {
 
                 <FadeUp className='col-span-2 py-6 flex flex-row-reverse gap-6 word-space'>
                     <>
-                        <p className='w-[250px] xl:w-[350px]'>
+                        <p className='w-[15.625rem] xl:w-[21.875rem]'>
                             היופי שבך (בעברית) התמחה בטיפולים מתקדמים לציפורניים, עיצוב ציפורניים, טיפולי פנים ואיפור בסטודיו מודרני ומרהיב. השילוב של מוצרים איכותיים ומקצוענות מוביל לתוצאות מרשימות ומרשימות, והפך את היופי שבך ליעד חובה לכל אישה שמעוניינת במראה מושלם וטיפוח מושלם.
                         </p>
                         <Button to='our-services' classes='mx-auto mb-auto'>לקביעת תור</Button>

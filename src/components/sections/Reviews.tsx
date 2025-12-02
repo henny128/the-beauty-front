@@ -37,7 +37,7 @@ const Reviews = () => {
         about="mobile view"
       >
         {mockReviews.map((review, index) => (
-          <div key={index} className="flex flex-col items-start p-4 mx-2 w-[300px] shrink-0 h-full">
+          <div key={index} className="flex flex-col items-start p-4 mx-2 w-[18.75rem] shrink-0 h-full">
             <div className="grid grid-cols-[auto_1fr] grid-row-2 space-x-2">
               <img
                 src={review.imageUrl}
@@ -64,7 +64,7 @@ const Reviews = () => {
       <div className="space-y-4 hidden md:block">
         <Marquee autoFill direction="left" pauseOnHover>
           {mockReviews.map((review, index) => (
-            <div key={index} className="flex flex-col items-start p-4 mx-2 w-[300px] h-full" dir="rtl">
+            <div key={index} className="flex flex-col items-start p-4 mx-2 w-[18.75rem] h-full" dir="rtl">
               <div className="grid grid-cols-[auto_1fr] grid-row-2 space-x-2">
                 <img
                   src={review.imageUrl}
