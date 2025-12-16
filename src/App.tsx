@@ -11,7 +11,7 @@ function App() {
       <Header />
       <Outlet />
       <a className='absolute bottom-10 right-10 md:right-20 lg:right-30' href={import.meta.env.VITE_WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
-        <FaWhatsappSquare className='h-10 w-10 md:h-20 md:w-20 text-green-600' />
+        <FaWhatsappSquare className='h-10 w-10 md:h-20 md:w-20 text-green-600 bg-white p-[0.50px] rounded-2xl' />
       </a>
     </div>
   )
