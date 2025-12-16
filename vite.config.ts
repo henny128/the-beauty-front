@@ -5,4 +5,7 @@ export default defineConfig({
   plugins: [
     tailwindcss(),
   ],
+  server:{
+    allowedHosts: ['telegraphical-mitzi-deathly.ngrok-free.dev']
+  }
 })

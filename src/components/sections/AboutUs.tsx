@@ -5,7 +5,7 @@ export default function AboutUs() {
     return (
         <>
             <section className='flex flex-col w-full md:hidden' about='mobile view'>
-                <LazyImage src='girl.png' classesContainer='h-[23.75rem]' playAnimatiom={true} />
+                <LazyImage src='girl.png' classesContainer='h-[23.75rem]' classesImage='object-cover' playAnimatiom={true} />
 
                 <FadeUp className='py-6 px-5 flex flex-col gap-3 text-left word-space'>
                     <>

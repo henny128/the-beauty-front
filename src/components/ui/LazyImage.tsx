@@ -12,7 +12,7 @@ const LazyImage: React.FC<LazyImageProps> = ({ src, alt = "", classesContainer =
     const [loaded, setLoaded] = useState(false);
 
     return (
-        <div className={`relative ${classesContainer}`}>
+        <div className={`relative ${classesContainer}`} about="image container">
             {!loaded && playAnimatiom && (
                 <div className={` bg-gray-200 animate-pulse absolute inset-0` } />
             )}
