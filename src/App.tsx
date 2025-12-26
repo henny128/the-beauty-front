@@ -7,11 +7,13 @@ import { FaWhatsappSquare } from "react-icons/fa";
 
 function App() {
   return (
-    <div className="static flex flex-col h-dvh w-full overflow-y-auto bg-(--wst-color-fill-base-shade-1)">
-      <Header />
-      <Outlet />
+    <div className='static scroll-wrapper  bg-(--wst-color-fill-base-shade-1)'>
+      <div className="relative flex flex-col h-dvh w-full rtl-content">
+        <Header />
+        <Outlet />
+      </div>
       <a className='absolute bottom-10 right-10 md:right-20 lg:right-30' href={import.meta.env.VITE_WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
-        <FaWhatsappSquare className='h-10 w-10 md:h-20 md:w-20 text-green-600 bg-white p-[0.50px] rounded-2xl' />
+        <FaWhatsappSquare className='h-10 w-10 md:h-20 md:w-20 text-green-600 bg-white p-[0.20px] rounded-2xl' />
       </a>
     </div>
   )
